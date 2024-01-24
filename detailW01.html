@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podrobný popis Počítač 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .computer-details {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        img {
+            max-width: 400px;
+            height: auto;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .details {
+            overflow: hidden; /* Pro správné zarovnání prvků kolem obrázku */
+        }
+
+        h1 {
+            margin-top: 0; /* Odstranění defaultního marginu pro nadpis */
+        }
+
+        .price {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .buy-button, .back-button {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .buy-button:hover, .back-button:hover {
+            background-color: #45a049;
+        }
+
+        .description {
+            margin-top: 20px;
+        }
+
+        /* Styly pro modální okno */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Podrobný popis Počítač 1</h1>
+</header>
+
+<div class="computer-details">
+    <div class="details">
+        <img src="./assets/okno01.jpg" alt="Počítač 1">
+        <div>
+            <h1>Počítač 1</h1>
+            <p class="price">Cena: 1000 Kč</p>
+            <p class="description">Základní popis počítače 1.</p>
+            <a href="javascript:void(0);" class="buy-button" onclick="openModal()">Koupit</a>
+            
+        </div>
+    </div>
+
+    <div>
+        <h2>Podrobný popis</h2>
+        <p>Zde můžete uvést další podrobnosti o počítači 1. Například technické specifikace, vlastnosti a další informace.</p>
+    </div>
+    <a href="window.html" class="back-button">Zpět</a>
+</div>
+
+<!-- Modální okno -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Zadejte své údaje</h2>
+        <form>
+            <label for="name">Jméno:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="phone">Telefonní číslo:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br>
+            <button type="submit">Odeslat</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Funkce pro otevření modálního okna
+    function openModal() {
+        document.getElementById('myModal').style.display = 'block';
+    }
+
+    // Funkce pro zavření modálního okna
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+
+    // Zavření modálního okna při kliknutí mimo okno
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('myModal')) {
+            closeModal();
+        }
+    }
+</script>
+
+</body>
+</html>
