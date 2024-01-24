@@ -6,6 +6,10 @@ body {
     padding: 0;
     background-color: #f8f8f8;
     color: #333;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 header {
