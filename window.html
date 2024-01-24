@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prodej Oken</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .computer {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+            float: left;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .details-button {
+            display: block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,21 +49,21 @@
         <p>Detailní popis různých typů oken, možností personalizace.</p>
     </section>
 
-    <section>
-        <h2>Cenová Nabídka</h2>
-        <p>Jasná prezentace cenových možností a balíčků.</p>
-    </section>
-
-    <section>
-        <h2>Galerie Produktů</h2>
-        <p>Rozsáhlá galerie s obrázky oken v různých prostředích.</p>
-        <!-- Zde můžete přidat obrázky nebo galerii oken -->
-    </section>
-
-    <section>
-        <h2>Kontaktní Formulář</h2>
-        <p>Formulář, který umožňuje návštěvníkům snadno se spojit s vámi ohledně dotazů nebo objednávek.</p>
-    </section>
+    <div class="computer">
+        <img src="obrazek1.jpg" alt="Počítač 1">
+        <h3>Počítač 1</h3>
+        <p>Cena: 1000 Kč</p>
+        <p>Základní popis počítače 1.</p>
+        <a href="podrobny_popis1.html" class="details-button">Podrobný popis</a>
+    </div>
+    
+    <div class="computer">
+        <img src="obrazek2.jpg" alt="Počítač 2">
+        <h3>Počítač 2</h3>
+        <p>Cena: 1200 Kč</p>
+        <p>Základní popis počítače 2.</p>
+        <a href="podrobny_popis2.html" class="details-button">Podrobný popis</a>
+    </div>
 
     <footer>
         <p>Zpět na <a href="index.html">Hlavní Stránka</a></p>
