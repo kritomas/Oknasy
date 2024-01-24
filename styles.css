@@ -59,3 +59,12 @@ a:hover {
 a:active {
 	color: orange;
 }
+
+.sides {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+img {
+	width: 600px;
+}
